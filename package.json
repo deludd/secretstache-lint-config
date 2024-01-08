@@ -1,0 +1,36 @@
+{
+  "name": "secretstache-lint-config",
+  "version": "1.0.0",
+  "description": "Integrated ESLint, Prettier, and Husky configuration package for standardizing code style and pre-commit checks across company projects.",
+  "keywords": [
+    "eslint",
+    "prettier",
+    "husky",
+    "config"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,md}'",
+    "prepare": "husky install"
+  },
+  "author": "Artem Dymytrov",
+  "license": "MIT",
+  "peerDependencies": {
+    "eslint": "^7.32.0",
+    "prettier": "^3.1.1"
+  },
+  "devDependencies": {
+    "@roots/bud-eslint": "^6.17.0",
+    "@roots/eslint-config": "^6.16.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1"
+  },
+  "lint-staged": {
+    "*.{js, jsx, json}": "npm run lint && npm run format"
+  }
+}
