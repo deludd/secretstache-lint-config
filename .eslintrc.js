@@ -1,6 +1,6 @@
 module.exports = {
     root: true,
-    extends: ["@roots/eslint-config/react", "prettier"],
+    extends: ["@roots/eslint-config/react", "prettier", "plugin:prettier/recommended"],
     plugins: ["prettier"],
     rules: {
         "indent": "off",
@@ -8,21 +8,7 @@ module.exports = {
         "no-console": "off",
         "no-plusplus": "off",
         "object-curly-newline": "off",
-        "prettier/prettier": [
-            "error",
-            {
-                "semi": true,
-                "trailingComma": "all",
-                "singleQuote": false,
-                "printWidth": 140,
-                "tabWidth": 4,
-                "jsxSingleQuote": false,
-                "jsxBracketSameLine": false,
-                "arrowParens": "avoid",
-                "endOfLine": "auto",
-                "quoteProps": "preserve",
-            },
-        ],
+        "prettier/prettier": "error",
         "comma-dangle": ["error", "always-multiline"],
         "func-names": "off",
         "semi": [
