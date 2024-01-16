@@ -1,12 +1,12 @@
 module.exports = {
     "semi": true,
-    "trailingComma": "all",
+    "trailingComma": "es5",
     "singleQuote": false,
     "printWidth": 140,
     "tabWidth": 4,
     "jsxSingleQuote": false,
-    "jsxBracketSameLine": false,
+    "bracketSameLine": false,
     "arrowParens": "avoid",
     "endOfLine": "auto",
     "quoteProps": "preserve",
-}
+};
