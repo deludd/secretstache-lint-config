@@ -11,7 +11,7 @@
   "main": "index.js",
   "scripts": {
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,md}'",
-    "postinstall": "npm install husky && node husky-setup-config.js && husky install",
+    "postinstall": "node husky-setup-config.js && husky install",
     "lint:fix": "eslint --fix ."
   },
   "author": "Artem Dymytrov",
