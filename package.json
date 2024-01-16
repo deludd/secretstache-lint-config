@@ -10,35 +10,33 @@
   ],
   "main": "index.js",
   "scripts": {
-    "lint": "eslint '**/*.{js,jsx,ts,tsx}' --fix",
     "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx,json,css,md}'",
-    "prepare": "husky install"
+    "postinstall": "node husky-setup-config.js && husky install",
+    "lint:fix": "eslint --fix ."
   },
   "author": "Artem Dymytrov",
   "license": "MIT",
   "peerDependencies": {
-    "eslint": "^7.32.0",
+    "eslint": ">=7.32.0 <9.0.0",
     "prettier": "^3.1.1"
   },
   "devDependencies": {
     "@roots/bud-eslint": "^6.17.0",
     "@roots/eslint-config": "^6.16.1",
-    "eslint": "^8.56.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.1.2",
     "husky": "^8.0.0",
-    "lint-staged": "^15.2.0",
-    "prettier": "^3.1.1"
+    "lint-staged": "^15.2.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "npm run lint:fix",
+      "prettier --write"
+    ]
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "prettier --write"
-    ]
   }
 }
