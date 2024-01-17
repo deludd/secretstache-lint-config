@@ -15,10 +15,6 @@
   },
   "author": "Artem Dymytrov",
   "license": "MIT",
-  "peerDependencies": {
-    "eslint": ">=7.32.0 <9.0.0",
-    "prettier": "^3.1.1"
-  },
   "devDependencies": {
     "@roots/bud-eslint": "^6.17.0",
     "@roots/eslint-config": "^6.16.1",
@@ -28,6 +24,10 @@
     "lint-staged": "^15.2.0"
   },
   "dependencies": {
+    "eslint": ">=7.32.0 <9.0.0",
+    "prettier": "^3.1.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0"
   },
