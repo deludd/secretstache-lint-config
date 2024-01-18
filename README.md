@@ -16,6 +16,12 @@ module.exports = {
   extends: ['secretstache']
 };
 ```
+
+Install Prettier by running the command: `npm install prettier --save-dev`. Update config in `package.json`:
+```
+"prettier": "eslint-config-secretstache/prettier",
+```
+
 # Installing Husky
 Install lint-staged and husky by running just one command:
 ```
