@@ -6,20 +6,15 @@ Integrated ESLint, Prettier configuration package for standardizing code style a
 # Install
 
 ```
-npm install eslint-config-secretstache
+yarn add eslint-config-secretstache
 ```
 
 # Usage
-Install ESlint by running the command: `npm install eslint --save-dev`. In your project, create or update the .eslintrc.js file.
+Update config in `package.json`:
 ```
-module.exports = {
-  extends: ['secretstache']
-};
-```
-
-Install Prettier by running the command: `npm install prettier --save-dev`. Update config in `package.json`:
-```
-"prettier": "eslint-config-secretstache/prettier",
+  "eslintConfig": {
+    "extends": "./node_modules/eslint-config-secretstache"
+  }
 ```
 
 # Installing Husky
@@ -33,15 +28,16 @@ Update config in `package.json`:
 ```
 "scripts": {
     //other scripts omitted
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint --fix --color",
+    "format": "prettier --write"
 },
 
-"lint-staged": {
-    "*.{js,jsx,ts,tsx}": "npm run lint:fix"
-},
-"husky": {
-  "hooks": {
-    "pre-commit": "lint-staged"
-  }
-}
+  "lint-staged": {
+    "resources/**/*.{js,json}": [
+      "npm run lint:fix"
+    ],
+    "resources/**/*.{js,json,css,scss}": [
+      "npm run format"
+    ]
+  },
 ```
