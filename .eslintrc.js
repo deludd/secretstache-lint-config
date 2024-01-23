@@ -8,7 +8,21 @@ module.exports = {
         'no-console': 'off',
         'no-plusplus': 'off',
         'object-curly-newline': 'off',
-        'prettier/prettier': ['error'],
+        'prettier/prettier': [
+            'error',
+            {
+                'semi': true,
+                'trailingComma': 'all',
+                'singleQuote': true,
+                'printWidth': 140,
+                'tabWidth': 4,
+                'jsxSingleQuote': false,
+                'bracketSameLine': false,
+                'arrowParens': 'always',
+                'endOfLine': 'auto',
+                'quoteProps': 'preserve',
+            },
+        ],
         'comma-dangle': ['error', 'always-multiline'],
         'func-names': 'off',
         'semi': [
