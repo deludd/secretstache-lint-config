@@ -12,8 +12,8 @@ yarn add eslint-config-secretstache
 # Usage
 Update config in `package.json`:
 ```
-  "eslintConfig": {
-    "extends": "./node_modules/eslint-config-secretstache"
+   "eslintConfig": {
+    "extends": "eslint-config-secretstache"
   }
 ```
 
