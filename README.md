@@ -4,9 +4,10 @@
 Integrated ESLint, Prettier configuration package for standardizing code style across company projects
 
 # Install
-
+Run the command below to install the package:
 ```
-yarn add eslint-config-secretstache
+yarn add eslint-config-secretstache eslint@">=7.32.0 <9.0.0" eslint-plugin-prettier@^5.1.2 eslint-config-prettier@^9.1.0 prettier@^3.1.1 @roots/bud-eslint@^6.17.0 @roots/eslint-config@^6.16.1 --dev
+
 ```
 
 # Usage
