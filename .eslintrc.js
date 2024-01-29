@@ -1,6 +1,6 @@
 module.exports = {
     root: true,
-    extends: ['@roots/eslint-config/react', 'prettier', 'plugin:prettier/recommended'],
+    extends: ['@roots/eslint-config/react', 'plugin:prettier/recommended', 'prettier'],
     plugins: ['prettier'],
     rules: {
         'indent': 'off',
@@ -17,7 +17,9 @@ module.exports = {
                 'printWidth': 140,
                 'tabWidth': 4,
                 'jsxSingleQuote': false,
-                'bracketSameLine': false,
+                'bracketSameLine': {
+                    'jsx': false,
+                  },
                 'arrowParens': 'always',
                 'endOfLine': 'auto',
                 'quoteProps': 'preserve',
