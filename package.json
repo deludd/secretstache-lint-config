@@ -14,7 +14,9 @@
     "@roots/bud-eslint": "^6.17.0",
     "@roots/eslint-config": "^6.16.1",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.1.2"
+    "eslint-plugin-prettier": "^5.1.2",
+    "prettier-plugin-css-order": "^2.0.1",
+    "prettier-plugin-multiline-arrays": "^3.0.1"
   },
   "dependencies": {
     "eslint": ">=7.32.0 <9.0.0",
