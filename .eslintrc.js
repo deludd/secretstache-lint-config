@@ -1,7 +1,7 @@
 module.exports = {
     root: true,
     extends: ['@roots/eslint-config/react', 'plugin:prettier/recommended', 'prettier'],
-    plugins: ['prettier'],
+    plugins: ['prettier', 'brackets'],
     rules: {
         'indent': 'off',
         'import/no-default-export': 'warn',
@@ -17,9 +17,6 @@ module.exports = {
                 'printWidth': 140,
                 'tabWidth': 4,
                 'jsxSingleQuote': false,
-                'bracketSameLine': {
-                    'jsx': false,
-                  },
                 'arrowParens': 'always',
                 'endOfLine': 'auto',
                 'quoteProps': 'preserve',
@@ -69,5 +66,27 @@ module.exports = {
         ],
         'react/no-array-index-key': 'warn',
         'jsx-quotes': ['warn', 'prefer-double'],
+        'react/jsx-wrap-multilines': [
+            'error',
+            {
+                declaration: 'parens-new-line',
+                assignment: 'parens-new-line',
+                return: 'parens-new-line',
+                arrow: 'parens-new-line',
+                condition: 'parens-new-line',
+                logical: 'parens-new-line',
+                prop: 'parens-new-line',
+            },
+        ],
+        'react/jsx-curly-spacing': ['error', 'never', { allowMultiline: true }],
+        'react/jsx-tag-spacing': [
+            'error',
+            {
+                closingSlash: 'never',
+                beforeSelfClosing: 'always',
+                afterOpening: 'never',
+                beforeClosing: 'never',
+            },
+        ],
     },
 };
