@@ -1,7 +1,7 @@
 module.exports = {
     root: true,
     extends: ['@roots/eslint-config/react', 'plugin:prettier/recommended', 'prettier'],
-    plugins: ['prettier', 'brackets'],
+    plugins: ['prettier'],
     rules: {
         'indent': 'off',
         'import/no-default-export': 'warn',
