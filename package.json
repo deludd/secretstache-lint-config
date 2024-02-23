@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-secretstache",
-  "version": "1.0.15",
+  "version": "1.0.16",
   "description": "Integrated ESLint, Prettier, and Husky configuration package for standardizing code style and pre-commit checks across company projects.",
   "keywords": [
     "eslint",
