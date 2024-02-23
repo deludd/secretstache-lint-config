@@ -99,7 +99,6 @@ module.exports = {
                 prop: "parens-new-line",
             },
         ],
-        // "react/jsx-curly-spacing": ["error", { "when": "never", "children": true }],
         "react/jsx-curly-spacing": ["error", "always", { "allowMultiline": true }],
         "react/jsx-tag-spacing": [
             "error",
