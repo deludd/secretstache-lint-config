@@ -1,17 +1,18 @@
 module.exports = {
     root: true,
-    extends: ["@roots/eslint-config/react", "plugin:prettier/recommended", "prettier"],
-    plugins: ["prettier", "prettier-plugin-brace-style"],
+    extends: ["@roots/eslint-config/react", "plugin:prettier/recommended", "plugin:import/errors", "plugin:import/warnings", "prettier"],
+    plugins: ["import", "prettier", "prettier-plugin-brace-style", "prettier-plugin-merge"],
     rules: {
         "indent": "off",
         "import/no-default-export": "warn",
         "no-console": "off",
         "no-plusplus": "off",
         "object-curly-newline": "off",
+        "brace-style": ["error", "allman"],
         "prettier/prettier": [
             "error",
             {
-                "semi": true,
+                "semi": false,
                 "trailingComma": "all",
                 "singleQuote": false,
                 "printWidth": 80,
@@ -22,7 +23,6 @@ module.exports = {
                 "quoteProps": "preserve",
                 "bracketSpacing": "true",
                 "singleAttributePerLine": "true",
-                "braceStyle": "allman"
             },
         ],
         "comma-dangle": ["error", "always-multiline"],
@@ -87,18 +87,15 @@ module.exports = {
                 "ignoreChainWithDepth": 2,
             },
         ],
-        "react/jsx-wrap-multilines": [
-            "error",
-            {
-                declaration: "parens-new-line",
-                assignment: "parens-new-line",
-                return: "parens-new-line",
-                arrow: "parens-new-line",
-                condition: "parens-new-line",
-                logical: "parens-new-line",
-                prop: "parens-new-line",
-            },
-        ],
+        "react/jsx-wrap-multilines": ["error", {
+            "declaration": "parens-new-line",
+            "assignment": "parens-new-line",
+            "return": "parens-new-line",
+            "arrow": "parens-new-line",
+            "condition": "ignore",
+            "logical": "ignore",
+            "prop": "ignore"
+        }],
         "react/jsx-curly-spacing": ["error", "always", { "allowMultiline": true }],
         "react/jsx-tag-spacing": [
             "error",
@@ -109,5 +106,33 @@ module.exports = {
                 beforeClosing: "never",
             },
         ],
+        "no-undef": "error",
+        "no-unused-vars": "warn",
+        "import/no-unresolved": "error",
+        "import/named": "error",
+        "import/namespace": "error",
+        "import/default": "error",
+        "import/export": "error",
+        "import/order": ["error", {
+            "groups": [["builtin", "external"], "internal", ["parent", "sibling", "index"]],
+            "pathGroups": [
+                {
+                    "pattern": "@wordpress/**",
+                    "group": "external",
+                    "position": "before"
+                },
+                {
+                    "pattern": "@scripts/**",
+                    "group": "internal",
+                    "position": "before"
+                }
+            ],
+            "pathGroupsExcludedImportTypes": ["builtin"],
+            "newlines-between": "always",
+            "alphabetize": {
+                "order": "asc",
+                "caseInsensitive": true
+            }
+        }],
     },
 };
