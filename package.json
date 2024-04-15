@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-secretstache",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "Integrated ESLint, Prettier configuration package for standardizing code style across company projects.",
   "keywords": [
     "eslint",
