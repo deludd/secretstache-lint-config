@@ -23,8 +23,8 @@
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^3.2.5",
-    "prettier-plugin-css-order": "^2.1.2",
+    "prettier": "3.0.3",
+    "prettier-plugin-css-order": "^2.0.0",
     "prettier-plugin-multiline-arrays": "^3.0.0"
   },
   "peerDependencies": {
@@ -32,8 +32,8 @@
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^3.2.5",
-    "prettier-plugin-css-order": "^2.1.2",
+    "prettier": "3.0.3",
+    "prettier-plugin-css-order": "^2.0.0",
     "prettier-plugin-multiline-arrays": "^3.0.0"
   }
 }
